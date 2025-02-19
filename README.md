@@ -21,10 +21,14 @@ Script Bash ini digunakan untuk otomatisasi proses deployment smart contract ke 
 ```bash
 git clone https://github.com/fznrival/Deployment.git && cd Deployment
 ```
+### 4️⃣ Permission Script Deployment
+```bash
+chmod +x funki.sh
+```
 
 ### 4️⃣ Jalankan Script Deployment
 ```bash
-bash funki.sh or ./funki.sh
+./funki.sh
 ```
 
 ## 📜 Lisensi
