@@ -24,6 +24,17 @@ calculate_next_run() {
     echo "$next_run"
 }
 
+# Fungsi countdown
+countdown() {
+    local seconds=$1
+    while [ $seconds -gt 0 ]; do
+        echo -ne "\r${YELLOW}Countdown to next deployment: $(date -u -d "@$seconds" +%H:%M:%S)${RESET}"
+        sleep 1
+        : $((seconds--))
+    done
+    echo
+}
+
 # Fungsi instalasi dependensi
 install_dependencies() {
     log_timestamp "${YELLOW}Menginstal dependensi...${RESET}"
@@ -36,7 +47,8 @@ install_dependencies() {
     if ! command -v forge &> /dev/null; then
         log_timestamp "${YELLOW}Foundry belum terinstal. Menginstal Foundry...${RESET}"
         curl -L https://foundry.paradigm.xyz | bash
-        source ~/.foundry/bin/init.sh
+        source ~/.bashrc
+        foundryup
     fi
 
     if [ ! -d "$SCRIPT_DIR/lib/openzeppelin-contracts" ]; then
@@ -179,8 +191,7 @@ main_loop() {
         
         log_timestamp "Deployment selesai. Menunggu 24 jam untuk batch berikutnya..."
         log_timestamp "Waktu eksekusi berikutnya: $(date -d "@$next_run" '+%Y-%m-%d %H:%M:%S')"
-        
-        sleep "$sleep_duration"
+        countdown $sleep_duration
     done
 }
 
