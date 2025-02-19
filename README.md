@@ -24,7 +24,7 @@ git clone https://github.com/fznrival/Deployment.git && cd Deployment
 
 ### 4️⃣ Jalankan Script Deployment
 ```bash
-bash funki.sh
+bash funki.sh or ./funki.sh
 ```
 
 ## 📜 Lisensi
