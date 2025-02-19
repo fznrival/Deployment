@@ -19,7 +19,7 @@ Script Bash ini digunakan untuk otomatisasi proses deployment smart contract ke 
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/fznrival/deployment.git && cd deployment
+git clone https://github.com/fznrival/Deployment.git && cd Deployment
 ```
 
 ### 4️⃣ Jalankan Script Deployment
