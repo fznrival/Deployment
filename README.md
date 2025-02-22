@@ -74,7 +74,7 @@ Explorer: https://testnet.explorer.sapphire.oasis.io
 Script menggunakan Oasis Sapphire Testnet secara default:
 
 ```bash
-RPC URL: [https://testnet.sapphire.oasis.io](https://rpc.nexus.xyz/http)
+RPC URL: https://rpc.nexus.xyz/http
 Chain ID: 392
 Explorer: https://explorer.nexus.xyz
 ```
