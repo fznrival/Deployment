@@ -1,0 +1,65 @@
+[
+  {
+    "name": "NERO Test Network",
+    "rpcUrl": "https://rpc-testnet.nerochain.io",
+    "chainId": "689",
+    "symbol": "NERO",
+    "explorer": "https://testnet.neroscan.io"
+  },
+  {
+    "name": "Monad Testnet",
+    "rpcUrl": "https://testnet-rpc.monad.xyz",
+    "chainId": "10143",
+    "symbol": "MON",
+    "explorer": "https://testnet.monadexplorer.com"
+  },
+  {
+    "name": "Rome Test Network",
+    "rpcUrl": "https://rome.testnet.romeprotocol.xyz",
+    "chainId": "200018",
+    "symbol": "ROME",
+    "explorer": "https://rome.testnet.romeprotocol.xyz:1000"
+  },
+  {
+    "name": "Unichain Sepolia Testnet",
+    "rpcUrl": "https://autumn-cosmological-scion.unichain-sepolia.quiknode.pro/c568806873f2a9edb9fcdea8aef0569ff729eb25",
+    "chainId": "1301",
+    "symbol": "ETH",
+    "explorer": "https://sepolia.uniscan.xyz"
+  },
+  {
+    "name": "Open Campus",
+    "rpcUrl": "https://rpc.open-campus-codex.gelato.digital",
+    "chainId": "656476",
+    "symbol": "EDU",
+    "explorer": "https://opencampus-codex.blockscout.com"
+  },
+  {
+    "name": "Superposition Testnet",
+    "rpcUrl": "https://testnet-rpc.superposition.so",
+    "chainId": "98985",
+    "symbol": "SPN",
+    "explorer": "https://testnet-explorer.superposition.so"
+  },
+  {
+    "name": "Sepolia Testnet",
+    "rpcUrl": "https://rpc.sepolia.org",
+    "chainId": "11155111",
+    "symbol": "ETH",
+    "explorer": "https://sepolia.etherscan.io"
+  }
+  {
+    "name": "Nexus Testnet",
+    "rpcUrl": "https://rpc.nexus.xyz/http",
+    "chainId": "392",
+    "symbol": "NEX",
+    "explorer": "https://explorer.nexus.xyz"
+  }
+  {
+    "name": "Oasis Testnet",
+    "rpcUrl": "https://testnet.sapphire.oasis.io",
+    "chainId": "23295",
+    "symbol": "TEST",
+    "explorer": "https://testnet.explorer.sapphire.oasis.io"
+  }
+]
