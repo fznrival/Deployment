@@ -69,15 +69,15 @@ validate_input() {
 # Fungsi input detail
 input_required_details() {
     if [ ! -f "$SCRIPT_DIR/token_deployment/.env" ]; then
-        read -p "Masukkan Nama Token (default: Rivalz Funki): " TOKEN_NAME
+        read -p "Masukkan Nama Token : " TOKEN_NAME
         TOKEN_NAME="${TOKEN_NAME:-Rivalz Funki}"
         validate_input "$TOKEN_NAME"
 
-        read -p "Masukkan Simbol Token (default: RLF): " TOKEN_SYMBOL
+        read -p "Masukkan Simbol Token : " TOKEN_SYMBOL
         TOKEN_SYMBOL="${TOKEN_SYMBOL:-RLF}"
         validate_input "$TOKEN_SYMBOL"
 
-        read -p "Jumlah kontrak yang akan dideploy (default: 1): " NUM_CONTRACTS
+        read -p "Jumlah kontrak yang akan dideploy : " NUM_CONTRACTS
         NUM_CONTRACTS="${NUM_CONTRACTS:-1}"
 
         read -p "Masukkan Private Key Anda: " PRIVATE_KEY
@@ -86,13 +86,13 @@ input_required_details() {
             exit 1
         fi
 
-        read -p "Masukkan RPC URL (default: https://funki-testnet.alt.technology): " RPC_URL
+        read -p "Masukkan RPC URL : " RPC_URL
         RPC_URL="${RPC_URL:-https://funki-testnet.alt.technology}"
 
-        read -p "Masukkan Explorer URL (default: https://testnet.funkiscan.io): " EXPLORER_URL
+        read -p "Masukkan Explorer URL : " EXPLORER_URL
         EXPLORER_URL="${EXPLORER_URL:-https://testnet.funkiscan.io}"
 
-        read -p "Masukkan Alamat Anda (public address): " YOUR_ADDRESS
+        read -p "Masukkan Alamat Anda : " YOUR_ADDRESS
         if [ -z "$YOUR_ADDRESS" ]; then
             log_timestamp "${RED}Alamat Anda wajib diisi!${RESET}"
             exit 1
