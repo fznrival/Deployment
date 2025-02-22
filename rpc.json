@@ -47,19 +47,26 @@
     "chainId": "11155111",
     "symbol": "ETH",
     "explorer": "https://sepolia.etherscan.io"
-  }
+  },
   {
     "name": "Nexus Testnet",
     "rpcUrl": "https://rpc.nexus.xyz/http",
     "chainId": "392",
     "symbol": "NEX",
     "explorer": "https://explorer.nexus.xyz"
-  }
+  },
   {
     "name": "Oasis Testnet",
     "rpcUrl": "https://testnet.sapphire.oasis.io",
     "chainId": "23295",
     "symbol": "TEST",
     "explorer": "https://testnet.explorer.sapphire.oasis.io"
+  },
+  {
+    "name": "KiteAI Testnet",
+    "rpcUrl": "https://rpc-testnet.gokite.ai",
+    "chainId": "2368",
+    "symbol": "KITE",
+    "explorer": "https://testnet.kitescan.ai"
   }
 ]
