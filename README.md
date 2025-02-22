@@ -70,4 +70,13 @@ Chain ID: 23295
 Explorer: https://testnet.explorer.sapphire.oasis.io
 ```
 
+### ⚙️ Konfigurasi
+Script menggunakan Oasis Sapphire Testnet secara default:
+
+```bash
+RPC URL: [https://testnet.sapphire.oasis.io](https://rpc.nexus.xyz/http)
+Chain ID: 392
+Explorer: https://explorer.nexus.xyz
+```
+
 Untuk mengubah jaringan atau kontrak, edit file .env atau modifikasi hardhat.config.js dan contracts/TokenAuthority.sol sesuai kebutuhan.
