@@ -36,7 +36,7 @@ git clone https://github.com/fznrival/Deployment.git
 ```
 
 ```bash
-cd oasis
+cd Deployment
 ```
 
 ### 2. Berikan izin eksekusi
