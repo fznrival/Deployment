@@ -32,7 +32,10 @@ Sebelum menjalankan script, pastikan Anda memiliki:
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/fznrival/oasis.git
+git clone https://github.com/fznrival/Deployment.git
+```
+
+```bash
 cd oasis
 ```
 
