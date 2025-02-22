@@ -41,12 +41,12 @@ cd Deployment
 
 ### 2. Berikan izin eksekusi
 ```bash
-chmod +x oasis-multi.sh
+chmod +x deployment.sh
 ```
 
 ### 3. Jalankan Script
 ```bash
-./oasis-multi.sh
+./deployment.sh
 ```
 
 ### 📜 Struktur Proyek
