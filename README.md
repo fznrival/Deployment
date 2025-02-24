@@ -21,7 +21,10 @@ Sebelum menjalankan skrip, pastikan sistem telah memiliki:
 
 ### **1. Siapkan File Konfigurasi**  
 - **rpc.json**: berisi daftar jaringan dan RPC endpoint yang akan digunakan  
-- **penerima.txt** *(opsional)*: daftar alamat yang akan menerima token jika dipilih opsi pengiriman ke file  
+- **penerima.txt** *(opsional)*: daftar alamat yang akan menerima token jika dipilih opsi pengiriman ke file
+```bash
+git clone https://github.com/fznrival/Deployment.git
+```
 
 ### **2. Jalankan Script**  
 ```bash  
