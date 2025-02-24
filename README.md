@@ -18,10 +18,10 @@ Sebelum menjalankan skrip, pastikan sistem telah memiliki:
 - **Node.js & npm** (jika belum ada, akan diinstal otomatis)  
 
 ## **Cara Penggunaan**  
-
-### **1. Siapkan File Konfigurasi**  
 - **rpc.json**: berisi daftar jaringan dan RPC endpoint yang akan digunakan  
 - **penerima.txt** *(opsional)*: daftar alamat yang akan menerima token jika dipilih opsi pengiriman ke file
+
+### **1. Clone Repository** 
 ```bash
 git clone https://github.com/fznrival/Deployment.git
 ```
