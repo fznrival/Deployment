@@ -1,82 +1,61 @@
-# Oasis Sapphire Multi-Wallet Deploy Script
+# **Automated Hardhat Deployment Script**  
 
-![Banner](https://img.shields.io/badge/Hardhat-Oasis%20Sapphire-blue?style=for-the-badge&logo=ethereum)  
-**Automate Smart Contract Deployment to Oasis Sapphire Testnet with Multi-Wallet Support**
+## **Deskripsi**  
+Script ini digunakan untuk mengotomatisasi deployment kontrak ERC-20 menggunakan Hardhat ke berbagai jaringan blockchain. Skrip mencakup fitur-fitur berikut:  
 
-Selamat datang di **Oasis Sapphire Multi-Wallet Deploy Script**! Script ini dirancang untuk mempermudah Anda dalam mendeploy smart contract ke Oasis Sapphire Testnet menggunakan Hardhat, dengan dukungan untuk multiple wallets dalam satu kali eksekusi. Cocok untuk developer blockchain yang ingin menguji kontrak dari berbagai akun atau mendistribusikan deployment secara otomatis.
+✅ Instalasi dependensi secara otomatis (Node.js, Hardhat, OpenZeppelin)  
+✅ Deteksi dan konfigurasi jaringan berdasarkan `rpc.json`  
+✅ Multi-wallet deployment dengan pemilihan jumlah akun  
+✅ Opsi pengiriman token ke alamat acak atau daftar penerima (`penerima.txt`)  
+✅ Mekanisme retry jika deployment gagal  
+✅ Countdown otomatis antar deployment  
 
-## ✨ Fitur Utama
-- **Multi-Wallet Support**: Deploy kontrak dari beberapa wallet sekaligus hanya dengan satu script.
-- **Otomatisasi Penuh**: Dari instalasi dependensi hingga deployment, semuanya dilakukan secara otomatis.
-- **Hardhat Integration**: Menggunakan Hardhat untuk kompilasi dan deployment yang andal.
-- **User-Friendly**: Antarmuka CLI interaktif untuk memasukkan jumlah wallet dan private keys.
-- **Oasis Sapphire Testnet**: Dikonfigurasi khusus untuk jaringan Oasis Sapphire Testnet (`chainId: 23295`).
+## **Prasyarat**  
+Sebelum menjalankan skrip, pastikan sistem telah memiliki:  
+- **Ubuntu/Debian-based OS**  
+- **Bash Shell**  
+- **jq** (akan diinstal otomatis jika belum tersedia)  
+- **Node.js & npm** (jika belum ada, akan diinstal otomatis)  
 
-## 🚀 Cara Kerja
-Script ini akan:
-1. Menginstal Node.js, npm, dan Hardhat jika belum ada.
-2. Membuat proyek Hardhat di direktori lokal.
-3. Meminta Anda memasukkan jumlah wallet dan private keys.
-4. Menulis smart contract `TokenAuthority` (ERC20) dan script deployment.
-5. Mendeploy kontrak dari setiap wallet ke Oasis Sapphire Testnet.
-6. Menampilkan alamat kontrak dan tautan ke explorer untuk setiap deployment.
+## **Cara Penggunaan**  
 
-## 📋 Persyaratan
-Sebelum menjalankan script, pastikan Anda memiliki:
-- **Sistem Operasi**: Linux (Ubuntu direkomendasikan), macOS, atau WSL di Windows.
-- **Internet**: Untuk mengunduh dependensi.
-- **Private Keys**: Minimal satu private key dengan dana TEST di Oasis Sapphire Testnet ([Faucet](https://faucet.testnet.sapphire.oasis.io/)).
-- **Terminal**: Akses ke command line interface.
+### **1. Siapkan File Konfigurasi**  
+- **rpc.json**: berisi daftar jaringan dan RPC endpoint yang akan digunakan  
+- **penerima.txt** *(opsional)*: daftar alamat yang akan menerima token jika dipilih opsi pengiriman ke file  
 
-## 🛠️ Instalasi dan Penggunaan
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/fznrival/Deployment.git
+### **2. Jalankan Script**  
+```bash  
+chmod +x deployment.sh && ./deployment.sh  
 ```
 
-```bash
-cd Deployment
-```
+### **3. Ikuti Instruksi di Terminal**  
+- Masukkan jumlah wallet dan private key  
+- Pilih metode pengiriman token  
+- Masukkan nama dan simbol token  
 
-### 2. Berikan izin eksekusi
-```bash
-chmod +x deployment.sh
-```
+### **4. Proses Deployment**  
+- Script akan menginisialisasi proyek Hardhat  
+- Menulis kontrak ERC-20  
+- Mengonfigurasi jaringan dan memverifikasi konektivitas  
+- Melakukan deployment ke setiap jaringan sesuai jumlah yang diatur  
 
-### 3. Jalankan Script
-```bash
-./deployment.sh
-```
+## **Struktur Proyek**  
+```  
+/project-directory  
+│── deployment.sh  
+│── rpc.json  
+│── penerima.txt (opsional)  
+│── /hardhat-project  
+│   ├── contracts/  
+│   │   └── TokenAuthority.sol  
+│   ├── scripts/  
+│   │   └── deploy.js  
+│   ├── hardhat.config.js  
+│   ├── .env  
+```  
 
-### 📜 Struktur Proyek
-Setelah script dijalankan, direktori hardhat-project akan dibuat dengan struktur berikut:
+## **Catatan Tambahan**  
+- Jika terjadi kegagalan saat deployment, script akan mencoba kembali hingga 3 kali sebelum melanjutkan ke jaringan berikutnya.  
+- Pengiriman token dapat dilakukan ke alamat acak atau berdasarkan daftar dari `penerima.txt`.  
+- Deployment dilakukan secara berkala sesuai jumlah yang telah ditentukan dengan jeda 24 jam antar deployment.  
 
-- hardhat-project/
-- ├── contracts/
-- │   └── TokenAuthority.sol  # Kontrak ERC20 sederhana
-- ├── scripts/
-- │   └── deploy.js           # Script deployment multi-wallet
-- ├── .env                    # File konfigurasi (private keys, RPC, dll.)
-- ├── hardhat.config.js       # Konfigurasi Hardhat
-- └── node_modules/           # Dependensi npm
-
-### ⚙️ Konfigurasi
-Script menggunakan Oasis Sapphire Testnet secara default:
-
-```bash
-RPC URL: https://testnet.sapphire.oasis.io
-Chain ID: 23295
-Explorer: https://testnet.explorer.sapphire.oasis.io
-```
-
-### ⚙️ Konfigurasi
-Script menggunakan Oasis Sapphire Testnet secara default:
-
-```bash
-RPC URL: https://rpc.nexus.xyz/http
-Chain ID: 392
-Explorer: https://explorer.nexus.xyz
-```
-
-Untuk mengubah jaringan atau kontrak, edit file .env atau modifikasi hardhat.config.js dan contracts/TokenAuthority.sol sesuai kebutuhan.
