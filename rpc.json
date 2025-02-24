@@ -21,13 +21,6 @@
     "explorer": "https://rome.testnet.romeprotocol.xyz:1000"
   },
   {
-    "name": "Unichain Sepolia Testnet",
-    "rpcUrl": "https://autumn-cosmological-scion.unichain-sepolia.quiknode.pro/c568806873f2a9edb9fcdea8aef0569ff729eb25",
-    "chainId": "1301",
-    "symbol": "ETH",
-    "explorer": "https://sepolia.uniscan.xyz"
-  },
-  {
     "name": "Open Campus",
     "rpcUrl": "https://rpc.open-campus-codex.gelato.digital",
     "chainId": "656476",
@@ -49,13 +42,6 @@
     "explorer": "https://sepolia.etherscan.io"
   },
   {
-    "name": "Nexus Testnet",
-    "rpcUrl": "https://rpc.nexus.xyz/http",
-    "chainId": "392",
-    "symbol": "NEX",
-    "explorer": "https://explorer.nexus.xyz"
-  },
-  {
     "name": "Oasis Testnet",
     "rpcUrl": "https://testnet.sapphire.oasis.io",
     "chainId": "23295",
@@ -68,5 +54,19 @@
     "chainId": "2368",
     "symbol": "KITE",
     "explorer": "https://testnet.kitescan.ai"
+  },
+  {
+    "name": "Somnia Network",
+    "rpcUrl": "https://dream-rpc.somnia.network",
+    "chainId": "50312",
+    "symbol": "STT",
+    "explorer": "https://somnia-testnet.socialscan.io"
+  },
+  {
+    "name": "Hemi Network",
+    "rpcUrl": "https://testnet.rpc.hemi.network/rpc",
+    "chainId": "743111",
+    "symbol": "ETH",
+    "explorer": "https://testnet.explorer.hemi.xyz/"
   }
 ]
