@@ -25,7 +25,7 @@ Sebelum menjalankan skrip, pastikan sistem telah memiliki:
 
 ### **2. Jalankan Script**  
 ```bash  
-chmod +x deployment.sh && ./deployment.sh  
+cd Deployment && chmod +x deployment.sh && ./deployment.sh  
 ```
 
 ### **3. Ikuti Instruksi di Terminal**  
